@@ -1,0 +1,21 @@
+require:
+  - rubocop-rspec
+
+AllCops:
+  DisplayStyleGuide: true
+  NewCops: enable
+
+Metrics/BlockLength:
+  CountAsOne: ['hash']
+
+Metrics/MethodLength:
+  CountAsOne: ['hash']
+
+RSpec/ExampleLength:
+  CountAsOne: ['hash']
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
