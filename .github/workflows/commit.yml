@@ -1,3 +1,4 @@
+name: Commit
 on:
   pull_request:
     types:
@@ -13,10 +14,13 @@ jobs:
     env:
       BUNDLE_PATH: .bundle
     steps:
-      - uses: actions/checkout@v4
-      - uses: ruby/setup-ruby@v1.153.0
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup ruby
+        uses: ruby/setup-ruby@v1.153.0
         with:
           bundler: default
           bundler-cache: true
           ruby-version: .ruby-version
-      - run: bundle exec rake
+      - name: Run rake
+        run: bundle exec rake
