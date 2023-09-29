@@ -1,0 +1,12 @@
+{
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  
+  "assignees": ["armin-joellenbeck"],
+  
+  "lockFileMaintenance": {
+    "enabled": true,
+    "schedule": ["at any time"]
+  },
+  
+  "rebaseWhen": "behind-base-branch"
+}
