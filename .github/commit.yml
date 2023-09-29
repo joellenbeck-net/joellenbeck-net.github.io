@@ -1,1 +1,35 @@
-
+name: Commit
+on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+  push:
+    branches:
+      - main
+jobs:
+  rspec:
+    runs-on: ubuntu-latest
+    env:
+      BUNDLE_PATH: .bundle
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1.153.0
+        with:
+          bundler: default
+          bundler-cache: true
+          ruby-version: .ruby-version
+      - run: bundle exec rspec
+  rubocop:
+    runs-on: ubuntu-latest
+    env:
+      BUNDLE_PATH: .bundle
+    steps:
+      - uses: actions/checkout@v4
+      - uses: ruby/setup-ruby@v1.153.0
+        with:
+          bundler: default
+          bundler-cache: true
+          ruby-version: .ruby-version
+      - run: bundle exec rubocop
