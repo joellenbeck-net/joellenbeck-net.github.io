@@ -1,4 +1,3 @@
-name: Commit
 on:
   pull_request:
     types:
@@ -9,7 +8,7 @@ on:
     branches:
       - main
 jobs:
-  rspec:
+  build:
     runs-on: ubuntu-latest
     env:
       BUNDLE_PATH: .bundle
@@ -20,16 +19,4 @@ jobs:
           bundler: default
           bundler-cache: true
           ruby-version: .ruby-version
-      - run: bundle exec rspec
-  rubocop:
-    runs-on: ubuntu-latest
-    env:
-      BUNDLE_PATH: .bundle
-    steps:
-      - uses: actions/checkout@v4
-      - uses: ruby/setup-ruby@v1.153.0
-        with:
-          bundler: default
-          bundler-cache: true
-          ruby-version: .ruby-version
-      - run: bundle exec rubocop
+      - run: bundle exec rake
