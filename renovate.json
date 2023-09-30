@@ -3,10 +3,13 @@
   
   "assignees": ["armin-joellenbeck"],
   
+  "automerge": true, 
+  "platformAutomerge": true,
+
   "lockFileMaintenance": {
     "enabled": true,
     "schedule": ["at any time"]
   },
   
-  "rebaseWhen": "behind-base-branch"
+  "pinDigests": true,  
 }
