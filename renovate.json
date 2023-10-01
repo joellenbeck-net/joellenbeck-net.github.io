@@ -3,8 +3,7 @@
   
   "assignees": ["armin-joellenbeck"],
   
-  "automerge": true, 
-  "platformAutomerge": true,
+  "automerge": true,
 
   "lockFileMaintenance": {
     "enabled": true,
