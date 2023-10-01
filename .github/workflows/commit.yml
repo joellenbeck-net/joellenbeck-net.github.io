@@ -12,6 +12,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
+      BUNDLE_FROZEN: false
       BUNDLE_PATH: .bundle
     steps:
       - name: Checkout
