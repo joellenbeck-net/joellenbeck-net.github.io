@@ -1,5 +1,3 @@
-require_relative '../spec_helper'
-
 module Algebra
   describe Lambda do
     describe '.y_combinator' do

@@ -1,5 +1,3 @@
-require_relative '../spec_helper'
-
 module Algebra
   describe Polynomial do
     let :x do
