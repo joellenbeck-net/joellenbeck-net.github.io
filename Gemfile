@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 gem 'minitest', '5.20.0'
-gem 'rake', '13.0.6'
+gem 'rake', '13.1.0'
 gem 'rspec', '3.12.0'
 gem 'rubocop', '1.57.2'
 gem 'rubocop-minitest', '0.33.0'
