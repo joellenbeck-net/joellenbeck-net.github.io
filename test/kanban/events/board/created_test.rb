@@ -3,7 +3,7 @@ require_relative '../../../test_helper'
 module Kanban
   module Events
     module Board
-      class CreatedTest < Minitest::Test
+      class CreatedTest < TLDR
         def created
           Created.new(id:, title:)
         end

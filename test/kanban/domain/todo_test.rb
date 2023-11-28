@@ -2,7 +2,7 @@ require_relative '../../test_helper'
 
 module Kanban
   module Domain
-    class TodoTest < Minitest::Test
+    class TodoTest < TLDR
       def todo
         @todo ||= Todo.new(id:, board_id:)
       end

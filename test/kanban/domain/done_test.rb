@@ -2,7 +2,7 @@ require_relative '../../test_helper'
 
 module Kanban
   module Domain
-    class DoneTest < Minitest::Test
+    class DoneTest < TLDR
       def done
         @done ||= Done.new(id:, board_id:)
       end

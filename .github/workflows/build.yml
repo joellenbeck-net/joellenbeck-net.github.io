@@ -1,0 +1,30 @@
+name: Build
+on:  
+  merge_group:
+    types:
+      - checks_requested
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize      
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup ruby
+        uses: ruby/setup-ruby@v1.161.0
+        with:
+          ruby-version: ruby
+          rubygems: latest
+          bundler: latest
+          bundler-cache: true
+      - name: Build
+        run: |
+          set -e -x
+          bundle exec rspec
+          bundle exec rubocop
+          bundle exec tldr
+

@@ -2,7 +2,7 @@ require_relative '../../test_helper'
 
 module Kanban
   module Domain
-    class OngoingTest < Minitest::Test
+    class OngoingTest < TLDR
       def ongoing
         @ongoing ||= Ongoing.new(id:, board_id:)
       end

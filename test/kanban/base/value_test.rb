@@ -2,7 +2,7 @@ require_relative '../../test_helper'
 
 module Kanban
   module Base
-    class ValueTest < Minitest::Test
+    class ValueTest < TLDR
     end
   end
 end

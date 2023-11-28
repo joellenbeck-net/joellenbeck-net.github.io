@@ -2,7 +2,7 @@ require_relative '../../test_helper'
 
 module Kanban
   module Base
-    class EventTest < Minitest::Test
+    class EventTest < TLDR
     end
   end
 end

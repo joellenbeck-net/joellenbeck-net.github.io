@@ -2,7 +2,7 @@ require_relative '../../test_helper'
 
 module Kanban
   module Domain
-    class BoardTest < Minitest::Test
+    class BoardTest < TLDR
       def board
         @board ||= Board.new(id:, title:)
       end

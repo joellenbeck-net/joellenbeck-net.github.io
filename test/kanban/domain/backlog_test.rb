@@ -2,7 +2,7 @@ require_relative '../../test_helper'
 
 module Kanban
   module Domain
-    class BacklogTest < Minitest::Test
+    class BacklogTest < TLDR
       def backlog
         @backlog ||= Backlog.new(id:, board_id:)
       end

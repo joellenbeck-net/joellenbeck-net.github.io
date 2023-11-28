@@ -3,7 +3,7 @@ require_relative '../../../test_helper'
 module Kanban
   module Events
     module Board
-      class ChangedTitleTest < Minitest::Test
+      class ChangedTitleTest < TLDR
         def changed_title
           @changed_title ||= ChangedTitle.new(id:, title:)
         end

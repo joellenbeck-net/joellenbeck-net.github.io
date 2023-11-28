@@ -3,7 +3,7 @@ require_relative '../../../test_helper'
 module Kanban
   module Events
     module Board
-      class DeletedTest < Minitest::Test
+      class DeletedTest < TLDR
         def deleted
           @deleted ||= Deleted.new(id:)
         end
