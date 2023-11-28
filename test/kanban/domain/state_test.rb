@@ -2,7 +2,7 @@ require_relative '../../test_helper'
 
 module Kanban
   module Domain
-    class StateTest < Minitest::Test
+    class StateTest < TLDR
     end
   end
 end

@@ -2,7 +2,7 @@ require_relative '../../test_helper'
 
 module Kanban
   module Domain
-    class RootTest < Minitest::Test
+    class RootTest < TLDR
       def id
         @id ||= 1
       end

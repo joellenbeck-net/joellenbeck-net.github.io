@@ -2,17 +2,24 @@ GEM
   remote: https://rubygems.org/
   specs:
     ast (2.4.2)
+    attr_extras (7.1.0)
+    base64 (0.1.1)
+    concurrent-ruby (1.2.2)
     diff-lcs (1.5.0)
     json (2.6.3)
     language_server-protocol (3.17.0.3)
-    minitest (5.20.0)
+    mocktail (2.0.0)
+      sorbet-eraser (~> 0.3.1)
+      sorbet-runtime (~> 0.5.9204)
+    optimist (3.1.0)
     parallel (1.23.0)
     parser (3.2.2.4)
       ast (~> 2.4.1)
       racc
+    patience_diff (1.2.0)
+      optimist (~> 3.0)
     racc (1.7.1)
     rainbow (3.1.1)
-    rake (13.1.0)
     regexp_parser (2.8.2)
     rexml (3.2.6)
     rspec (3.12.0)
@@ -45,15 +52,20 @@ GEM
       rubocop (~> 1.41)
     rubocop-factory_bot (2.24.0)
       rubocop (~> 1.33)
-    rubocop-minitest (0.33.0)
-      rubocop (>= 1.39, < 2.0)
-    rubocop-rake (0.6.0)
-      rubocop (~> 1.0)
-    rubocop-rspec (2.25.0)
-      rubocop (~> 1.40)
+    rubocop-rspec (2.24.1)
+      rubocop (~> 1.33)
       rubocop-capybara (~> 2.17)
       rubocop-factory_bot (~> 2.22)
     ruby-progressbar (1.13.0)
+    sorbet-eraser (0.3.1)
+    sorbet-runtime (0.5.11142)
+    super_diff (0.10.0)
+      attr_extras (>= 6.2.4)
+      diff-lcs
+      patience_diff
+    tldr (0.9.5)
+      concurrent-ruby (~> 1.2)
+      super_diff (~> 0.10)
     unicode-display_width (2.5.0)
     zeitwerk (2.6.12)
 
@@ -61,14 +73,16 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
-  minitest (= 5.20.0)
-  rake (= 13.1.0)
+  bundler (= 2.4.20)
+  mocktail (= 2.0.0)
   rspec (= 3.12.0)
-  rubocop (= 1.57.2)
-  rubocop-minitest (= 0.33.0)
-  rubocop-rake (= 0.6.0)
-  rubocop-rspec (= 2.25.0)
+  rubocop (= 1.57.1)
+  rubocop-rspec (= 2.24.1)
+  tldr (= 0.9.5)
   zeitwerk (= 2.6.12)
+
+RUBY VERSION
+   ruby 3.2.2p53
 
 BUNDLED WITH
    2.4.20

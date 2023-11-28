@@ -3,7 +3,7 @@ require_relative '../../../test_helper'
 module Kanban
   module Events
     module Card
-      class CreatedTest < Minitest::Test
+      class CreatedTest < TLDR
         def created
           @created ||= Created.new(id:, board_id:, title:, text:, state:)
         end

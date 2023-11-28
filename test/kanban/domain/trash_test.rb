@@ -2,7 +2,7 @@ require_relative '../../test_helper'
 
 module Kanban
   module Domain
-    class TrashTest < Minitest::Test
+    class TrashTest < TLDR
       def trash
         @trash ||= Trash.new(id:, board_id:)
       end

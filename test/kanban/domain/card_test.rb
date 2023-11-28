@@ -2,7 +2,7 @@ require_relative '../../test_helper'
 
 module Kanban
   module Domain
-    class CardTest < Minitest::Test
+    class CardTest < TLDR
       def card
         @card ||= Card.new(id:, board_id:, title:, text:, state:)
       end
@@ -34,7 +34,7 @@ module Kanban
       def state
         return @state unless @state.nil?
 
-        @state ||= Minitest::Mock.new
+        @state ||= Mocktail.of(State)
 
         class << @state
           def ==(_other)
@@ -75,23 +75,23 @@ module Kanban
       end
 
       def test_delete
-        state.expect :delete, nil
         card.delete
+        verify { state.delete }
       end
 
       def test_select
-        state.expect :select, nil
         card.select
+        verify { state.select }
       end
 
       def test_start
-        state.expect :start, nil
         card.start
+        verify { state.start }
       end
 
       def test_finish
-        state.expect :finish, nil
         card.finish
+        verify { state.finish }
       end
     end
   end
