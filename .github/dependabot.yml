@@ -1,8 +1,16 @@
 version: 2
 updates:
   - package-ecosystem: bundler
+    allow:
+      - dependency-type: all
+    assignees:
+      - armin-joellenbeck
     directory: /
     schedule:
       interval: daily
+  - package-ecosystem: github-actions
     assignees:
       - armin-joellenbeck
+    directory: /
+    schedule:
+      interval: daily
