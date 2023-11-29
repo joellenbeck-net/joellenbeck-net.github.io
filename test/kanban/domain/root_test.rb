@@ -1,5 +1,3 @@
-require_relative '../../test_helper'
-
 module Kanban
   module Domain
     class RootTest < TLDR
