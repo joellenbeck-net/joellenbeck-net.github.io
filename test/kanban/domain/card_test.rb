@@ -1,5 +1,3 @@
-require_relative '../../test_helper'
-
 module Kanban
   module Domain
     class CardTest < TLDR
@@ -76,22 +74,22 @@ module Kanban
 
       def test_delete
         card.delete
-        verify { state.delete }
+        Mocktail.verify { state.delete }
       end
 
       def test_select
         card.select
-        verify { state.select }
+        Mocktail.verify { state.select }
       end
 
       def test_start
         card.start
-        verify { state.start }
+        Mocktail.verify { state.start }
       end
 
       def test_finish
         card.finish
-        verify { state.finish }
+        Mocktail.verify { state.finish }
       end
     end
   end
