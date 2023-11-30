@@ -24,7 +24,5 @@ jobs:
       - name: Build
         run: |
           set -e -x
-          bundle exec rspec
-          bundle exec rubocop
           bundle exec tldr
-
+          bundle exec rubocop

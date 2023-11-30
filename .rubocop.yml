@@ -1,5 +1,4 @@
-require:
-  - rubocop-rspec
+require: []
 
 AllCops:
   DisplayStyleGuide: true
@@ -10,10 +9,7 @@ Metrics/BlockLength:
 
 Metrics/MethodLength:
   CountAsOne: ['hash']
-  Max: 11
-
-RSpec/ExampleLength:
-  CountAsOne: ['hash']
+  Max: 12
 
 Style/Documentation:
   Enabled: false
