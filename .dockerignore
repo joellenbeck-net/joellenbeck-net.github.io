@@ -1,6 +1,6 @@
-.bundle/ruby
 Docker
 .dockerignore
 .git
 .github
 .gitignore
+**/.*.swp

@@ -1,0 +1,11 @@
+source: .
+destination: tmp/public
+
+exclude:
+  - compose.yaml
+  - Dockerfile
+  - LICENSE
+  - README.md
+  - lib
+  - test
+  - tmp
