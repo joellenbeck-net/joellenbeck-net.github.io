@@ -1,8 +1,5 @@
-name: Build
-on:  
-  merge_group:
-    types:
-      - checks_requested
+name: Commit
+on:
   push:
     branches-ignore:
       - main
