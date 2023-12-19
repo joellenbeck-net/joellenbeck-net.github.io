@@ -88,7 +88,7 @@ GEM
     sass-embedded (1.69.5-x86_64-linux-gnu)
       google-protobuf (~> 3.23)
     sorbet-eraser (0.3.1)
-    sorbet-runtime (0.5.11156)
+    sorbet-runtime (0.5.11158)
     super_diff (0.10.0)
       attr_extras (>= 6.2.4)
       diff-lcs
