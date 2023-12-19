@@ -38,7 +38,7 @@ GEM
       sass-embedded (~> 1.54)
     jekyll-watch (2.2.1)
       listen (~> 3.0)
-    json (2.6.3)
+    json (2.7.1)
     kramdown (2.4.0)
       rexml
     kramdown-parser-gfm (1.1.0)
@@ -108,7 +108,7 @@ PLATFORMS
 DEPENDENCIES
   bundler (= 2.5.1)
   jekyll (= 4.3.2)
-  json (= 2.6.3)
+  json (= 2.7.1)
   mocktail (= 2.0.0)
   rubocop (= 1.59.0)
   tldr (= 0.9.5)
