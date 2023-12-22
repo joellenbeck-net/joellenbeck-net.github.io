@@ -1,0 +1,12 @@
+name: playground
+
+services:
+  www:
+    image: ghcr.io/joellenbeck-net/${COMPOSE_PROJECT_NAME}/www
+    deploy:
+      replicas: 1
+    ports:
+      - protocol: tcp
+        published: 8080
+        target: 8080
+        

@@ -4,7 +4,7 @@ on:
     branches-ignore:
       - main
 jobs:
-  build:
+  commit:
     runs-on: ubuntu-latest
     steps:
     - name: Set up Docker Buildx
@@ -18,5 +18,4 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v4
     - name: Build
-      run: docker compose run --build --rm shell true
-
+      run: ./bin/build

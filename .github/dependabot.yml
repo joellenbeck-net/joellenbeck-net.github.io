@@ -5,7 +5,15 @@ updates:
       - dependency-type: all
     assignees:
       - armin-joellenbeck
-    directory: /
+    directory: /ruby
+    schedule:
+      interval: daily
+  - package-ecosystem: bundler
+    allow:
+      - dependency-type: all
+    assignees:
+      - armin-joellenbeck
+    directory: /www
     schedule:
       interval: daily
   - package-ecosystem: github-actions
