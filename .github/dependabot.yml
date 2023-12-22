@@ -1,24 +1,37 @@
 version: 2
 updates:
-  - package-ecosystem: bundler
+  - directory: /
+    package-ecosystem: github-actions
+    assignees:
+      - armin-joellenbeck
+    schedule:
+      interval: daily
+  - directory: /playgroud-ruby
+    package-ecosystem: docker
+    assignees:
+      - armin-joellenbeck
+    schedule:
+      interval: daily
+  - directory: /playgroud-ruby
+    package-ecosystem: bundler
     allow:
       - dependency-type: all
     assignees:
       - armin-joellenbeck
-    directory: /ruby
+    
     schedule:
       interval: daily
-  - package-ecosystem: bundler
+  - directory: /www
+    package-ecosystem: docker
+    assignees:
+      - armin-joellenbeck
+    schedule:
+      interval: daily
+  - directory: /www
+    package-ecosystem: bundler
     allow:
       - dependency-type: all
     assignees:
       - armin-joellenbeck
-    directory: /www
-    schedule:
-      interval: daily
-  - package-ecosystem: github-actions
-    assignees:
-      - armin-joellenbeck
-    directory: /
     schedule:
       interval: daily
