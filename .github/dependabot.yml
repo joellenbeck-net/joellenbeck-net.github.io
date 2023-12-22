@@ -6,19 +6,18 @@ updates:
       - armin-joellenbeck
     schedule:
       interval: daily
-  - directory: /playgroud-ruby
+  - directory: /playground-ruby
     package-ecosystem: docker
     assignees:
       - armin-joellenbeck
     schedule:
       interval: daily
-  - directory: /playgroud-ruby
+  - directory: /playground-ruby
     package-ecosystem: bundler
     allow:
       - dependency-type: all
     assignees:
-      - armin-joellenbeck
-    
+      - armin-joellenbeck  
     schedule:
       interval: daily
   - directory: /www
