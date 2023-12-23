@@ -15,9 +15,11 @@ RUN bundle install
 FROM bundle AS jekyll
 COPY --chown=user:user _config.yml _config.yml
 COPY --chown=user:user _layouts _layouts
-COPY --chown=user:user default.scss default.scss
 COPY --chown=user:user favicon.ico favicon.ico
-COPY --chown=user:user index.md index.md
+COPY --chown=user:user images images
+COPY --chown=user:user index.html index.html
+COPY --chown=user:user papers papers
+COPY --chown=user:user stylesheets stylesheets
 RUN bundle exec jekyll build
 
 FROM bundle AS rubocop
