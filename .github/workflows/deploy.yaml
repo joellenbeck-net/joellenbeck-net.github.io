@@ -1,0 +1,30 @@
+name: Deploy
+on:  
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    permissions:
+      id-token: write
+      pages: write
+    steps:
+      - name: Download pages artifact from commit workflow
+        uses: dawidd6/action-download-artifact@v3.0.0
+        with:
+          workflow: commit.yaml
+          commit: ${{github.sha}}
+          name: github-pages
+      - name: Upload pages artifact
+        uses: actions/upload-artifact@v4.0.0
+        with:
+          name: github-pages
+          path: artifact.tar
+      - name: Deploy pages artifact
+        id: deploy
+        uses: actions/deploy-pages@v4.0.0
+          
