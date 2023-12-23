@@ -1,4 +1,4 @@
 #/bin/sh
 set -e -x
-./bin/build
-docker compose --progress plain up --remove-orphans --wait
+docker buildx bake plain
+docker compose up --remove-orphans --wait
