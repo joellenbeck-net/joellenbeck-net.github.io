@@ -1,3 +1,3 @@
 #/bin/sh
 set -e -x
-docker buildx bake --progress plain
+docker buildx bake --load --progress plain

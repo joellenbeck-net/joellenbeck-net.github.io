@@ -1,8 +1,6 @@
-name: playground
-
 services:
   www:
-    image: ghcr.io/joellenbeck-net/${COMPOSE_PROJECT_NAME}/www
+    image: ghcr.io/joellenbeck-net/www
     deploy:
       replicas: 1
     ports:
