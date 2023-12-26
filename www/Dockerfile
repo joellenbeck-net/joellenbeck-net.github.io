@@ -1,4 +1,4 @@
-FROM docker.io/library/ruby:3.2.2@sha256:1e79a3869fd6b16c98e67008249ea907864747b8c10a274891e99e2e2ca8f807 AS ruby
+FROM docker.io/library/ruby:3.3.0@sha256:8e811f2174f16f77792dcfb6757cc27820caf21d19e2debd759138b2e77cb702 AS ruby
 ENTRYPOINT []
 CMD []
 RUN adduser --comment '' --disabled-password user
