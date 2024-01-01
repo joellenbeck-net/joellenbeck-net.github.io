@@ -1,10 +1,54 @@
+x-service: &service
+  image: ghcr.io/joellenbeck-net/dev
+  user: "${USER}"
+  volumes:
+    - source: .
+      target: /app
+      type: bind
 services:
-  www:
-    image: ghcr.io/joellenbeck-net/www
-    deploy:
-      replicas: 1
+  bundle:
+    command: bundle install
+    <<: *service
+  jekyll:
+    command: bundle exec jekyll build
+    depends_on:
+      bundle:
+        condition: service_completed_successfully
+    <<: *service
+  rubocop:
+    command: bundle exec rubocop
+    depends_on:
+      bundle:
+        condition: service_completed_successfully
+    <<: *service
+  tldr:
+    command: bundle exec tldr
+    depends_on:
+      bundle:
+        condition: service_completed_successfully
+    <<: *service
+  shell:
+    command: bash
+    <<: *service
+  web:
+    command: bundle exec jekyll serve --host 0.0.0.0 --port 8080
     ports:
       - protocol: tcp
         published: 8080
         target: 8080
-        
+    depends_on:
+      bundle:
+        condition: service_completed_successfully
+    <<: *service
+  test:
+    command: echo Ok
+    depends_on:
+      jekyll:
+        condition: service_completed_successfully
+      rubocop:
+        condition: service_completed_successfully
+      tldr:
+        condition: service_completed_successfully
+      shell:
+        condition: service_completed_successfully
+    <<: *service

@@ -1,2 +1,6 @@
+.bash_history
+.bundle/cache
+.bundle/ruby
+.cache
 public
 **/.*.swp
