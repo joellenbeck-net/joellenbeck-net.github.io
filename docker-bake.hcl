@@ -1,20 +1,12 @@
 group "default" {
   targets = [
-    "playground-ruby",
-    "www"
+    "dev"
   ]
 }
 
-target "playground-ruby" {
-  context = "./playground-ruby"
+target "dev" {
+  context = "."
   tags = [
-    "ghcr.io/joellenbeck-net/playground-ruby" 
-  ]
-}
-
-target "www" {
-  context = "./www"
-  tags = [
-    "ghcr.io/joellenbeck-net/www" 
+    "ghcr.io/joellenbeck-net/dev" 
   ]
 }

@@ -1,0 +1,12 @@
+source: .
+destination: public
+
+exclude:
+  - Dockerfile
+  - docker-bake.hcl
+  - docker-compose.yaml
+  - LICENSE
+  - README.md
+  - bin
+  - lib
+  - test

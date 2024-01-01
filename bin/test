@@ -1,0 +1,5 @@
+#/bin/sh
+set -e -x
+docker buildx bake --load
+export USER=$(id -u)
+docker compose up --attach-dependencies test

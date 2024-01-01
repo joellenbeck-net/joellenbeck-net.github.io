@@ -1,4 +1,4 @@
 #/bin/sh
 set -e -x
-docker buildx bake
-docker compose up --remove-orphans --wait
+docker buildx bake --load
+docker compose up web
