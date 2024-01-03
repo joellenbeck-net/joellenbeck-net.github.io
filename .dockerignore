@@ -1,0 +1,13 @@
+Dockerfile
+docker-bake.hcl
+docker-compose.yaml
+.dockerignore
+
+.git
+.github
+.gitignore
+
+LICENSE
+README.md
+
+**/.*.swp
