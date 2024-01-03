@@ -3,6 +3,8 @@ docker-bake.hcl
 docker-compose.yaml
 .dockerignore
 
+bin
+
 .git
 .github
 .gitignore
