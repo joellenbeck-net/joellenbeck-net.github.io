@@ -17,8 +17,12 @@ jobs:
         password: ${{ secrets.GITHUB_TOKEN }}
     - name: Checkout
       uses: actions/checkout@v4
-    - name: Build and Test
-      run: ./bin/test
+    - name: Build
+      run: |
+        set -e -x
+        docker buildx bake --load
+        container=$(docker create ghcr.io/joellenbeck-net/dev)
+        docker container cp $container:/app/public public
     - name: Upload pages artifact
       uses: actions/upload-pages-artifact@v3
       with:
