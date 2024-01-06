@@ -7,6 +7,8 @@ x-service: &service
 services:
   shell:
     command: bash
+    deploy:
+      replicas: 0
     <<: *service
   web:
     command: bundle exec jekyll serve --host 0.0.0.0 --port 8080
@@ -14,4 +16,5 @@ services:
       - protocol: tcp
         published: 8080
         target: 8080
+    restart: always
     <<: *service
