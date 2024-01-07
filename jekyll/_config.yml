@@ -1,0 +1,5 @@
+source: .
+destination: public
+
+exclude:
+  - Dockerfile

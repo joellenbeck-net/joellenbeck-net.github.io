@@ -1,0 +1,19 @@
+require: []
+
+AllCops:
+  DisplayStyleGuide: true
+  NewCops: enable
+  SuggestExtensions: false
+
+Metrics/BlockLength:
+  CountAsOne: ['hash']
+
+Metrics/MethodLength:
+  CountAsOne: ['hash']
+  Max: 12
+
+Style/Documentation:
+  Enabled: false
+
+Style/FrozenStringLiteralComment:
+  Enabled: false
