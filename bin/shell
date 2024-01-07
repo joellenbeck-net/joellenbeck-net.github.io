@@ -1,4 +1,0 @@
-#/bin/sh
-set -e -x
-docker buildx bake
-docker compose run --remove-orphans --rm shell

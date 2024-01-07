@@ -21,7 +21,7 @@ jobs:
       run: |
         set -e -x
         docker buildx bake --load
-        container=$(docker create ghcr.io/joellenbeck-net/dev)
+        container=$(docker create ghcr.io/joellenbeck-net/jekyll)
         docker container cp $container:/app/public public
     - name: Upload pages artifact
       uses: actions/upload-pages-artifact@v3

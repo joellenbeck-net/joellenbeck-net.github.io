@@ -10,9 +10,6 @@ RUN bundle config --local path .bundle
 RUN bundle install
 COPY . .
 
-FROM bundle AS jekyll
-RUN bundle exec jekyll build
-
 FROM bundle AS rubocop
 RUN bundle exec rubocop
 
@@ -21,7 +18,6 @@ RUN bundle exec tldr
 
 FROM bundle
 RUN \
-  --mount=from=jekyll,target=/mnt/jekyll \
   --mount=from=rubocop,target=/mnt/rubocop \
   --mount=from=tldr,target=/mnt/tldr \
-  cp -a /mnt/jekyll/app/public .
+  true
