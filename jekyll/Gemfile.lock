@@ -12,7 +12,8 @@ GEM
     eventmachine (1.2.7)
     ffi (1.16.3)
     forwardable-extended (2.6.0)
-    google-protobuf (3.25.1)
+    google-protobuf (3.25.3-aarch64-linux)
+    google-protobuf (3.25.3-x86_64-linux)
     http_parser.rb (0.8.0)
     i18n (1.14.1)
       concurrent-ruby (~> 1.0)
@@ -81,7 +82,9 @@ GEM
       parser (>= 3.2.1.0)
     ruby-progressbar (1.13.0)
     safe_yaml (1.0.5)
-    sass-embedded (1.69.6-aarch64-linux-gnu)
+    sass-embedded (1.71.1-aarch64-linux-gnu)
+      google-protobuf (~> 3.25)
+    sass-embedded (1.71.1-x86_64-linux-gnu)
       google-protobuf (~> 3.25)
     sorbet-eraser (0.3.1)
     sorbet-runtime (0.5.11164)
@@ -93,6 +96,7 @@ GEM
 
 PLATFORMS
   aarch64-linux
+  x86_64-linux
 
 DEPENDENCIES
   jekyll (= 4.3.3)
