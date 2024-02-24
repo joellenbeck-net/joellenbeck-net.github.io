@@ -6,13 +6,7 @@ updates:
       - armin-joellenbeck
     schedule:
       interval: daily
-  - directory: /playground-ruby
-    package-ecosystem: docker
-    assignees:
-      - armin-joellenbeck
-    schedule:
-      interval: daily
-  - directory: /playground-ruby
+  - directory: /jekyll
     package-ecosystem: bundler
     allow:
       - dependency-type: all
@@ -20,17 +14,15 @@ updates:
       - armin-joellenbeck  
     schedule:
       interval: daily
-  - directory: /www
+  - directory: /jekyll
     package-ecosystem: docker
     assignees:
       - armin-joellenbeck
     schedule:
       interval: daily
-  - directory: /www
-    package-ecosystem: bundler
-    allow:
-      - dependency-type: all
+  - directory: /ruby
+    package-ecosystem: docker
     assignees:
       - armin-joellenbeck
     schedule:
-      interval: daily
+      interval: daily 
