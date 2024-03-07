@@ -87,7 +87,7 @@ GEM
     sass-embedded (1.71.1-x86_64-linux-gnu)
       google-protobuf (~> 3.25)
     sorbet-eraser (0.3.1)
-    sorbet-runtime (0.5.11285)
+    sorbet-runtime (0.5.11286)
     terminal-table (3.0.2)
       unicode-display_width (>= 1.1.1, < 3)
     unicode-display_width (2.5.0)
