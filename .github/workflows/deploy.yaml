@@ -26,5 +26,5 @@ jobs:
           path: artifact.tar
       - name: Deploy pages artifact
         id: deploy
-        uses: actions/deploy-pages@v4.0.4
+        uses: actions/deploy-pages@v4.0.5
           
