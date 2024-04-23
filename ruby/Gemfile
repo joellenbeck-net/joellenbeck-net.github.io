@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-ruby '3.3.0'
+ruby '3.3.1'
 
 gem 'mocktail', '2.0.0'
 gem 'rubocop', '1.59.0', require: false
