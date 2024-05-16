@@ -1,4 +1,4 @@
-FROM docker.io/library/ruby:3.3.1@sha256:79248279f2691e9e2d2947c8bc873b52dad6f4b06b1347c5305060e4f4d7d520 AS ruby
+FROM docker.io/library/ruby:3.3.1@sha256:797d68561a91415e05fd95178f467d86d77bce2d4f17f32683241a687cbd1705 AS ruby
 ENTRYPOINT []
 CMD ["true"]
 ENV BUNDLE_APP_CONFIG=.bundle
