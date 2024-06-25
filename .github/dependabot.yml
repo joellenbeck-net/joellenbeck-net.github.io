@@ -4,8 +4,7 @@ updates:
     package-ecosystem: github-actions
     assignees:
       - armin-joellenbeck
-    labels:
-      - dependencies
+    labels: []
     schedule:
       interval: daily
   - directory: /jekyll
@@ -14,23 +13,20 @@ updates:
       - dependency-type: all
     assignees:
       - armin-joellenbeck  
-    labels:
-      - dependencies
+    labels: []
     schedule:
       interval: daily
   - directory: /jekyll
     package-ecosystem: docker
     assignees:
       - armin-joellenbeck
-    labels:
-      - dependencies
+    labels: []
     schedule:
       interval: daily
   - directory: /ruby
     package-ecosystem: docker
     assignees:
       - armin-joellenbeck
-    labels:
-      - dependencies
+    labels: []
     schedule:
       interval: daily
