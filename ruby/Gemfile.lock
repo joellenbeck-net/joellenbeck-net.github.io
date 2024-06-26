@@ -47,7 +47,7 @@ GEM
       concurrent-ruby (~> 1.2)
       super_diff (~> 0.10)
     unicode-display_width (2.5.0)
-    zeitwerk (2.6.12)
+    zeitwerk (2.6.16)
 
 PLATFORMS
   aarch64-linux
@@ -57,7 +57,7 @@ DEPENDENCIES
   mocktail (= 2.0.0)
   rubocop (= 1.64.1)
   tldr (= 0.9.5)
-  zeitwerk (= 2.6.12)
+  zeitwerk (= 2.6.16)
 
 RUBY VERSION
    ruby 3.3.0p0
