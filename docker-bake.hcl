@@ -1,20 +1,20 @@
 group "default" {
   targets = [
-    "jekyll",
-    "ruby"
+    "playground-rb",
+    "www"
   ]
 }
 
-target "jekyll" {
-  context = "jekyll"
+target "playground-rb" {
+  context = "playground-rb"
   tags = [
-    "ghcr.io/joellenbeck-net/jekyll" 
+    "ghcr.io/joellenbeck-net/playground-rb" 
   ]
 }
 
-target "ruby" {
-  context = "ruby"
+target "www" {
+  context = "www"
   tags = [
-    "ghcr.io/joellenbeck-net/ruby" 
+    "ghcr.io/joellenbeck-net/www" 
   ]
 }

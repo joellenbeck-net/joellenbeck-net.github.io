@@ -2,27 +2,27 @@ x-service: &service
 services:
   app:
     command: bundle exec jekyll serve --host 0.0.0.0 --port 8080
-    image: ghcr.io/joellenbeck-net/jekyll
+    image: ghcr.io/joellenbeck-net/www
     ports:
       - protocol: tcp
         published: 8080
         target: 8080
     restart: always
-  jekyll:
+  playground-rb:
     command: bash
     deploy:
       replicas: 0
-    image: ghcr.io/joellenbeck-net/jekyll
+    image: ghcr.io/joellenbeck-net/playground-rb
     volumes:
-      - source: jekyll
+      - source: playground-rb
         target: /mnt/app
         type: bind
-  ruby:
+  www:
     command: bash
     deploy:
       replicas: 0
-    image: ghcr.io/joellenbeck-net/ruby
+    image: ghcr.io/joellenbeck-net/www
     volumes:
-      - source: ruby
+      - source: www
         target: /mnt/app
         type: bind
