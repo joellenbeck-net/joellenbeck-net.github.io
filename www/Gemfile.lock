@@ -58,7 +58,7 @@ GEM
       sorbet-eraser (~> 0.3.1)
       sorbet-runtime (~> 0.5.9204)
     parallel (1.25.1)
-    parser (3.3.3.0)
+    parser (3.3.4.0)
       ast (~> 2.4.1)
       racc
     pathutil (0.16.2)
@@ -74,13 +74,13 @@ GEM
     rexml (3.3.2)
       strscan
     rouge (4.3.0)
-    rubocop (1.64.1)
+    rubocop (1.65.0)
       json (~> 2.3)
       language_server-protocol (>= 3.17.0)
       parallel (~> 1.10)
       parser (>= 3.3.0.2)
       rainbow (>= 2.2.2, < 4.0)
-      regexp_parser (>= 1.8, < 3.0)
+      regexp_parser (>= 2.4, < 3.0)
       rexml (>= 3.2.5, < 4.0)
       rubocop-ast (>= 1.31.1, < 2.0)
       ruby-progressbar (~> 1.7)
@@ -110,7 +110,7 @@ DEPENDENCIES
   jekyll (= 4.3.3)
   mocktail (= 2.0.0)
   rake (= 13.2.1)
-  rubocop (= 1.64.1)
+  rubocop (= 1.65.0)
   zeitwerk (= 2.6.16)
 
 RUBY VERSION
