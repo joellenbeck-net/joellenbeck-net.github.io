@@ -5,6 +5,7 @@ updates:
     assignees:
       - armin-joellenbeck
     labels: []
+    open-pull-requests-limit: 100
     schedule:
       interval: daily
   - package-ecosystem: bundler
@@ -16,6 +17,7 @@ updates:
     assignees:
       - armin-joellenbeck  
     labels: []
+    open-pull-requests-limit: 100
     schedule:
       interval: daily
   - package-ecosystem: docker
@@ -25,5 +27,6 @@ updates:
     assignees:
       - armin-joellenbeck
     labels: []
+    open-pull-requests-limit: 100
     schedule:
       interval: daily
