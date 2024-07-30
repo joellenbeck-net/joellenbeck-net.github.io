@@ -37,7 +37,7 @@ GEM
       parser (>= 3.3.1.0)
     ruby-progressbar (1.13.0)
     sorbet-eraser (0.3.1)
-    sorbet-runtime (0.5.11495)
+    sorbet-runtime (0.5.11500)
     strscan (3.1.0)
     super_diff (0.12.1)
       attr_extras (>= 6.2.4)
