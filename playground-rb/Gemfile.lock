@@ -11,7 +11,7 @@ GEM
       sorbet-eraser (~> 0.3.1)
       sorbet-runtime (~> 0.5.9204)
     optimist (3.1.0)
-    parallel (1.25.1)
+    parallel (1.26.1)
     parser (3.3.4.2)
       ast (~> 2.4.1)
       racc
