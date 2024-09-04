@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
 gem 'mocktail', '2.0.0'
-gem 'rubocop', '1.66.0', require: false
+gem 'rubocop', '1.66.1', require: false
 gem 'tldr', '0.10.0', require: false
 gem 'zeitwerk', '2.6.18'
