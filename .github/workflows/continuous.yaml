@@ -1,0 +1,43 @@
+name: Continuous
+on:
+  push:
+    branches-ignore:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Set up Docker Buildx
+      uses: docker/setup-buildx-action@v3
+    - name: Login to GitHub Container Registry
+      uses: docker/login-action@v3
+      with:
+        registry: ghcr.io
+        username: ${{ github.actor }}
+        password: ${{ secrets.GITHUB_TOKEN }}
+    - name: Checkout
+      uses: actions/checkout@v4
+    - name: Build
+      run: |
+        set -e -x
+        docker buildx bake --load
+        container=$(docker create ghcr.io/joellenbeck-net/www)
+        docker container cp $container:/app/public public
+    - name: Upload pages artifact
+      uses: actions/upload-pages-artifact@v3.0.1
+      with:
+        path: public
+  deploy:
+    needs:
+      - build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    permissions:
+      id-token: write
+      pages: write
+    steps:
+      - name: Deploy pages artifact
+        id: deploy
+        uses: actions/deploy-pages@v4.0.5
