@@ -36,6 +36,7 @@ jobs:
       with:
         path: public
   deploy:
+    if: ${{ github.ref_name == github.event.repository.default_branch }}
     needs:
       - build
     runs-on: ubuntu-latest
