@@ -1,10 +1,18 @@
-name: Commit
+name: Continuous
 on:
+  pull_request:
+    types:
+      - opened
+      - reopened
+      - synchronize
+  merge_group:
+    types:
+      - checks_requested
   push:
-    branches-ignore:
+    branches:
       - main
 jobs:
-  commit:
+  build:
     runs-on: ubuntu-latest
     steps:
     - name: Set up Docker Buildx
@@ -24,6 +32,21 @@ jobs:
         container=$(docker create ghcr.io/joellenbeck-net/www)
         docker container cp $container:/app/public public
     - name: Upload pages artifact
-      uses: actions/upload-pages-artifact@v3
+      uses: actions/upload-pages-artifact@v3.0.1
       with:
         path: public
+  deploy:
+    if: ${{ github.ref_name == github.event.repository.default_branch }}
+    needs:
+      - build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deploy.outputs.page_url }}
+    permissions:
+      id-token: write
+      pages: write
+    steps:
+      - name: Deploy pages artifact
+        id: deploy
+        uses: actions/deploy-pages@v4.0.5
