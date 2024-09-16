@@ -8,21 +8,3 @@ services:
         published: 8080
         target: 8080
     restart: always
-  playground-rb:
-    command: bash
-    deploy:
-      replicas: 0
-    image: ghcr.io/joellenbeck-net/playground-rb
-    volumes:
-      - source: playground-rb
-        target: /mnt/app
-        type: bind
-  www:
-    command: bash
-    deploy:
-      replicas: 0
-    image: ghcr.io/joellenbeck-net/www
-    volumes:
-      - source: www
-        target: /mnt/app
-        type: bind
