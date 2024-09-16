@@ -10,16 +10,10 @@ target "playground-rb" {
   contexts = {
     ruby = "target:ruby"
   }
-  tags = [
-    "ghcr.io/joellenbeck-net/playground-rb" 
-  ]
 }
 
 target "ruby" {
   context = "ruby"
-  tags = [
-    "ghcr.io/joellenbeck-net/ruby" 
-  ]
 }
 
 target "www" {
