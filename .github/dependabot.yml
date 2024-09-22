@@ -2,8 +2,6 @@ version: 2
 updates:
   - package-ecosystem: github-actions
     directory: /
-    assignees:
-      - armin-joellenbeck
     labels: []
     open-pull-requests-limit: 100
     schedule:
@@ -14,8 +12,6 @@ updates:
       - /www
     allow:
       - dependency-type: all
-    assignees:
-      - armin-joellenbeck  
     labels: []
     open-pull-requests-limit: 100
     schedule:
@@ -24,8 +20,6 @@ updates:
     directories:
       - /playground-rb
       - /www
-    assignees:
-      - armin-joellenbeck
     labels: []
     open-pull-requests-limit: 100
     schedule:
