@@ -3,4 +3,4 @@ source 'https://rubygems.org'
 gem 'mocktail', '2.0.0'
 gem 'rubocop', '1.67.0', require: false
 gem 'tldr', '0.10.0', require: false
-gem 'zeitwerk', '2.7.0'
+gem 'zeitwerk', '2.7.1'
