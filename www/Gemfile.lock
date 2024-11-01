@@ -58,7 +58,7 @@ GEM
       sorbet-eraser (~> 0.3.1)
       sorbet-runtime (~> 0.5.9204)
     parallel (1.26.3)
-    parser (3.3.5.0)
+    parser (3.3.5.1)
       ast (~> 2.4.1)
       racc
     pathutil (0.16.2)
